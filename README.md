@@ -2,10 +2,10 @@
 
 This GitHub Repository is for the Computer Science 330
 Final Project for...
-    Group 6:
-        -Michael Y
-        -Jack B
-        -Tabitha S
+Group 6:
+-Michael Y
+-Jack B
+-Tabitha S
 
 # GPA Calculation Project
 

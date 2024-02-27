@@ -5,7 +5,10 @@ import pandas as pd
 
 # # Creating 2D arrays from a group, 2D is for the sections
 
-def create_GRP(run):   
+
+# function takes in a .RUN file
+# # fucntion then reads the groups in the .RUN and adds them to an array that it returns
+def ini_GRP(run):   
     data = [run]  
     with open(run) as file:
         line = file.readlines()  
@@ -15,8 +18,9 @@ def create_GRP(run):
                 data.append(x)
     return np.array(data)
 
-
-def create_SEC(grp):
+# function takes in a .GRP file
+# # function then reads the .GRP for the .SEC and adds them to an array that it returns
+def ini_SEC(grp):
     data = [grp]
     with open(grp) as file:
         line = file.readlines()
@@ -27,7 +31,7 @@ def create_SEC(grp):
     return np.array(data)
 
 
-def letter_to_number(letterGrade):
+def grd_val(letterGrade):
     gpaLetter = {
         'A': 4.0,
         'A-': 3.7,
@@ -48,8 +52,3 @@ def letter_to_number(letterGrade):
     
     return gpaLetter.get(letterGrade,None)
 
-grp_arr = create_GRP("TESTRUN.RUN")
-sec_arr = create_SEC(grp_arr[1])
-
-print(grp_arr)
-print(sec_arr)

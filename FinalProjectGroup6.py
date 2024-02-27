@@ -5,10 +5,9 @@ import pandas as pd
 
 # # Creating 2D arrays from a group, 2D is for the sections
 
+# Function for assigning Groups to RUN files
 
-# function takes in a .RUN file
-# # fucntion then reads the groups in the .RUN and adds them to an array that it returns
-def ini_GRP(run):   
+def create_GRP(run):   
     data = [run]  
     with open(run) as file:
         line = file.readlines()  
@@ -18,9 +17,9 @@ def ini_GRP(run):
                 data.append(x)
     return np.array(data)
 
-# function takes in a .GRP file
-# # function then reads the .GRP for the .SEC and adds them to an array that it returns
-def ini_SEC(grp):
+# Functions for assigning Sections to Groups
+
+def create_SEC(grp):
     data = [grp]
     with open(grp) as file:
         line = file.readlines()
@@ -30,8 +29,9 @@ def ini_SEC(grp):
                 data.append(x)
     return np.array(data)
 
+# Function for assigning letters to GPA numbers
 
-def grd_val(letterGrade):
+def letter_to_number(letterGrade):
     gpaLetter = {
         'A': 4.0,
         'A-': 3.7,
@@ -52,3 +52,12 @@ def grd_val(letterGrade):
     
     return gpaLetter.get(letterGrade,None)
 
+# Calls the functions for createing GRPs and SECs
+
+grp_arr = create_GRP("TESTRUN.RUN")
+sec_arr = create_SEC(grp_arr[1])
+
+# Prints out the created arrays, 1st is the filename ($$$.RUN, or $$$.GRP), 2nd is all the data
+
+print(grp_arr)
+print(sec_arr)

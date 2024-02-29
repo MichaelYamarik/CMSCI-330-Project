@@ -123,17 +123,26 @@ def calc_SEC_GPA(array):
     #prints the GPA of the section
     print(f"GPA is {(np.sum(summy))/(credit*np.size(summy))}")
     
-#function to start the whole thing    
+#function to start the whole thing  
+
+#########    NOT FINAL    ###################
 def begin(run):
+    #creates an array of the groups 
     array = create_GRP(run)
+    #prints the run array
     print(array)
     for x in array[1:]:
+        #creates the group array
         temp = create_SEC(x)
+        #prints the current group
         print(temp)
         for y in temp[1:]:
+            #creates the section array
             temptwo = create_students(y)
+            #prints the current section array
             print(temptwo)
+            #prints the current GPA of the section
             print(calc_SEC_GPA(temptwo))
             
-            
+#Use any .run file you want
 begin('TESTRUN.RUN')

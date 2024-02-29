@@ -7,6 +7,7 @@ import pandas as pd
 
 # Function for assigning Groups to RUN files
 def create_GRP(run): 
+    print(f"\nCurrently Displaying: {run}  ************\n")
     #creates temp array that takes in a run file  
     data = [run]  
     #opens up the file
@@ -26,6 +27,7 @@ def create_GRP(run):
 
 # Functions for assigning Sections to Groups
 def create_SEC(grp):
+    print(f"\nCurrently Displaying: {grp}  ************\n")
     #creates a temp array
     data = [grp]
     #opens the group file
@@ -45,28 +47,38 @@ def create_SEC(grp):
 
 #creates an array for the students
 def create_students(sec):
+    print(f"\nCurrently Displaying: {sec}  ************\n")
     #creates a temp array
     data = []
     #opens up the section file to read
     with open(sec, 'r') as file:
         #reads the first line and adds it to the array
-        file.readline()
+        temp = file.readline()
         #for loop
         for x in file:
             #strips the white space and the quotes
             val = x.strip().strip('"').split('","')
             #appends data to the array
             data.append(val)
+        #finds out what the credit hours are
+        if temp.strip().endswith('3.0'):
+            temp = 3.0
+        elif temp.strip().endswith('3'):
+            temp = 3.0
+        else:
+            temp = 4.0
+        #appends the data to the data array
+        data.append(temp)
     #the second for loop is for assigning the letter to number function to the third value of each array column
-    for x in data:
+    for x in data[:-1]:
         val=x[2]
         #calls the letter to num function to convert grade letter to number
         point = letter_to_number(val)
         x[2]=point
     #returns the array
     return data
-# Function for assigning letters to GPA numbers
 
+# Function for assigning letters to GPA numbers
 def letter_to_number(letterGrade):
     #long list of values for each possible grade
     gpaLetter = {
@@ -89,14 +101,39 @@ def letter_to_number(letterGrade):
     #returns a get function to see what the inputted letter is related to for GPA's
     return gpaLetter.get(letterGrade,None)
 
-# Calls the functions for createing GRPs and SECs
-
-grp_arr = create_GRP("TESTRUN.RUN")
-sec_arr = create_SEC(grp_arr[1])
-stu_gra = create_students(sec_arr[1])
-
-# Prints out the created arrays, 1st is the filename ($$$.RUN, or $$$.GRP), 2nd is all the data
-
-print(grp_arr)
-print(sec_arr)
-print(stu_gra)
+#function for finding the GPA. Uses an array
+def calc_SEC_GPA(array):
+    print(f"\nCurrently Displaying: GPA  ************\n")
+    #assigns credit hours to a variable
+    credit = array[-1]
+    #creates the data temp array
+    data = []
+    #only takes in the values, not the credit hours
+    data.append(array[:-1])
+    #creates an empty temp numpy array
+    summy = np.empty((0,0))
+    #for loop to loop through specifically the grade numbers
+    for x in data:
+        for y in x:
+            val = y[2]
+            if isinstance(val, float):
+                summy = np.append(summy, val)
+    #calculations for the GPA
+    summy = summy * credit
+    #prints the GPA of the section
+    print(f"GPA is {(np.sum(summy))/(credit*np.size(summy))}")
+    
+#function to start the whole thing    
+def begin(run):
+    array = create_GRP(run)
+    print(array)
+    for x in array[1:]:
+        temp = create_SEC(x)
+        print(temp)
+        for y in temp[1:]:
+            temptwo = create_students(y)
+            print(temptwo)
+            print(calc_SEC_GPA(temptwo))
+            
+            
+begin('TESTRUN.RUN')

@@ -138,7 +138,7 @@ def calc_SEC_GPA(array):
 #########    NOT FINAL    ###################
 def begin(run):
     #creates an array of the groups 
-    array = run
+    array = create_GRP(run)
     print(array)
     for x in array[1:]:
         #creates the group array
@@ -157,7 +157,5 @@ for x in range(5):
     print("****************************************\n")
 #Use any .run file you want
 
-arr2 = create_GRP("TestRun02.run")
 
-
-begin(arr2)
+begin("TestRun02.run")

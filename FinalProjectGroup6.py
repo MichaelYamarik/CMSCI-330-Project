@@ -8,10 +8,14 @@ import pandas as pd
 # Function for assigning Groups to RUN files
 def create_GRP(run): 
     print(f"\nCurrently Displaying: {run}  ************\n")
-    #creates temp array that takes in a run file  
-    data = [run]  
+    #creates temp array that takes in a run file
+    
+    data = []  
+    
+
     #opens up the file
     with open(run) as file:
+        
         #begins to read lines in file
         line = file.readlines()
         #for loop to loop through the lines  
@@ -19,17 +23,18 @@ def create_GRP(run):
             #removes white space
             x = x.strip()
             #checks whether or not a .GRP file exists
-            if x.endswith('.GRP'):
-                #if exists appends to the data array
-                data.append(x)
+            data.append(x)
+            
+
     #returns the array
+    
     return np.array(data)
 
 # Functions for assigning Sections to Groups
 def create_SEC(grp):
     print(f"\nCurrently Displaying: {grp}  ************\n")
     #creates a temp array
-    data = [grp]
+    data = []
     #opens the group file
     with open(grp) as file:
         #begins reading lines
@@ -39,15 +44,13 @@ def create_SEC(grp):
             #strips the white space
             x = x.strip()
             #checks if there is a section file
-            if x.endswith('.SEC'):
-                #appends the section file to the temp array
-                data.append(x)
+            data.append(x)
     #returns the array to the 
     return np.array(data)
 
 #creates an array for the students
 def create_students(sec):
-    print(f"\nCurrently Displaying: {sec}  ************\n")
+    #print(f"\nCurrently Displaying: {sec}  ************\n")
     #creates a temp array
     data = []
     #opens up the section file to read
@@ -59,7 +62,10 @@ def create_students(sec):
             #strips the white space and the quotes
             val = x.strip().strip('"').split('","')
             #appends data to the array
-            data.append(val)
+            if len(val) != 3:
+                pass
+            else:
+                data.append(val)
         #finds out what the credit hours are
         if temp.strip().endswith('3.0'):
             temp = 3.0
@@ -70,8 +76,11 @@ def create_students(sec):
         #appends the data to the data array
         data.append(temp)
     #the second for loop is for assigning the letter to number function to the third value of each array column
+    
     for x in data[:-1]:
+        
         val=x[2]
+        
         #calls the letter to num function to convert grade letter to number
         point = letter_to_number(val)
         x[2]=point
@@ -103,6 +112,7 @@ def letter_to_number(letterGrade):
 
 #function for finding the GPA. Uses an array
 def calc_SEC_GPA(array):
+    
     print(f"\nCurrently Displaying: GPA  ************\n")
     #assigns credit hours to a variable
     credit = array[-1]
@@ -121,15 +131,14 @@ def calc_SEC_GPA(array):
     #calculations for the GPA
     summy = summy * credit
     #prints the GPA of the section
-    print(f"GPA is {(np.sum(summy))/(credit*np.size(summy))}")
+    print(f"GPA of is {(np.sum(summy))/(credit*np.size(summy))}")
     
 #function to start the whole thing  
 
 #########    NOT FINAL    ###################
 def begin(run):
     #creates an array of the groups 
-    array = create_GRP(run)
-    #prints the run array
+    array = run
     print(array)
     for x in array[1:]:
         #creates the group array
@@ -140,9 +149,15 @@ def begin(run):
             #creates the section array
             temptwo = create_students(y)
             #prints the current section array
-            print(temptwo)
+            #print(temptwo)
             #prints the current GPA of the section
             print(calc_SEC_GPA(temptwo))
-            
+
+for x in range(5):
+    print("****************************************\n")
 #Use any .run file you want
-begin('TESTRUN.RUN')
+
+arr2 = create_GRP("TestRun02.run")
+
+
+begin(arr2)

@@ -1,17 +1,21 @@
 import numpy as np
 import pandas as pd
-
 # Functions
+
+#globals
+
+temp_sec = []
+
+
 
 # # Creating 2D arrays from a group, 2D is for the sections
 
 # Function for assigning Groups to RUN files
 def create_GRP(run): 
-    print(f"\nCurrently Displaying: {run}  ************\n")
+    #print(f"\nCurrently Displaying: {run}  ************\n")
     #creates temp array that takes in a run file
     
     data = []  
-    
 
     #opens up the file
     with open(run) as file:
@@ -32,8 +36,11 @@ def create_GRP(run):
 
 # Functions for assigning Sections to Groups
 def create_SEC(grp):
-    print(f"\nCurrently Displaying: {grp}  ************\n")
+    #print(f"\nCurrently Displaying: {grp}  ************\n")
     #creates a temp array
+    
+    
+    
     data = []
     #opens the group file
     with open(grp) as file:
@@ -50,6 +57,8 @@ def create_SEC(grp):
 
 #creates an array for the students
 def create_students(sec):
+    
+    
     #print(f"\nCurrently Displaying: {sec}  ************\n")
     #creates a temp array
     data = []
@@ -89,6 +98,8 @@ def create_students(sec):
 
 # Function for assigning letters to GPA numbers
 def letter_to_number(letterGrade):
+    
+    
     #long list of values for each possible grade
     gpaLetter = {
         'A': 4.0,
@@ -113,7 +124,7 @@ def letter_to_number(letterGrade):
 #function for finding the GPA. Uses an array
 def calc_SEC_GPA(array):
     
-    print(f"\nCurrently Displaying: GPA  ************\n")
+    #print(f"\nCurrently Displaying: GPA  ************\n")
     #assigns credit hours to a variable
     credit = array[-1]
     #creates the data temp array
@@ -131,31 +142,69 @@ def calc_SEC_GPA(array):
     #calculations for the GPA
     summy = summy * credit
     #prints the GPA of the section
-    print(f"GPA of is {(np.sum(summy))/(credit*np.size(summy))}")
+    
+    newGPA = (np.sum(summy))/(credit*np.size(summy))
+    
+    temp_sec.append(newGPA)
+    
+    return newGPA
+    
     
 #function to start the whole thing  
 
+def empty_list(array):
+    global temp_sec
+    temp_sec.clear()
+
 #########    NOT FINAL    ###################
 def begin(run):
+    
+    file = open('GPA_Results.txt', 'w')
+    
+    empty_list(temp_sec)
     #creates an array of the groups 
     array = create_GRP(run)
-    print(array)
+    
     for x in array[1:]:
+        
+        file.write(f"****** Now Showing Group {x} ******\n\n")
+        
         #creates the group array
         temp = create_SEC(x)
         #prints the current group
         print(temp)
+        count = 0
+        temp_sum = 0
+        std_dev = 0
+        sec_gps = []
+        empty_list(temp_sec)
         for y in temp[1:]:
             #creates the section array
             temptwo = create_students(y)
             #prints the current section array
             #print(temptwo)
             #prints the current GPA of the section
-            print(calc_SEC_GPA(temptwo))
+            sectempgpa = calc_SEC_GPA(temptwo)
+            sec_gps.append(sectempgpa)
+            temp_sum = sum(temp_sec)
+            count = count + 1
+            temp_sum = temp_sum / count
+            std_dev = np.std(temp_sec)
+            #print(f"Section {y}'s GPA is {sectempgpa}")
+            #print(f"Current Group, {x}'s GPA is {temp_sum }")
+        file.write(f"\nThe GPA of group {x} is: {temp_sum}\n\n")
+        newtemp = create_SEC(x)
+        newcount = 0
+        for g in newtemp[1:]:
+            print(g)
+            empty_list(temp_sec)
+            newsectemp = sec_gps[newcount]
+            newcount = newcount + 1
+            z_score = (newsectemp - temp_sum) / std_dev
+            file.write(f"Section {g}'s GPA is {newsectemp} and the Z-Score is {z_score}\n")       
 
-for x in range(5):
-    print("****************************************\n")
+        file.write("\n\n")
+
 #Use any .run file you want
-
 
 begin("TestRun02.run")

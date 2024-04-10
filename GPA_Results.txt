@@ -1,27 +1,200 @@
 ****** Now Showing Group COMSC100.grp ******
 
 
-The GPA of group COMSC100.grp is: 3.334481658692185
+The GPA of group COMSC100.grp is: 3.334
 
-Section COMSC123001.sec's GPA is 2.642105263157895 and the Z-Score is -1.364965606913548
-Section COMSC123002.sec's GPA is 3.8333333333333335 and the Z-Score is 0.9834468408053528
-Section COMSC123003.sec's GPA is 3.968421052631579 and the Z-Score is 1.2497616544641967
-Section COMSC125001.sec's GPA is 3.66 and the Z-Score is 0.6417338071755628
-Section COMSC125002.sec's GPA is 2.8666666666666667 and the Z-Score is -0.9222604621300148
-Section COMSC130001.sec's GPA is 3.036363636363637 and the Z-Score is -0.5877162334015478
 
+Section COMSC123001.sec's GPA is 2.642.
+Section COMSC123002.sec's GPA is 3.833.
+Section COMSC123003.sec's GPA is 3.968.
+Section COMSC125001.sec's GPA is 3.66.
+Section COMSC125002.sec's GPA is 2.867.
+Section COMSC130001.sec's GPA is 3.036.
 
 ****** Now Showing Group Combined123.grp ******
 
 
-The GPA of group Combined123.grp is: 3.5496923681753403
-
-Section COMSC123001.sec's GPA is 2.642105263157895 and the Z-Score is -2.0866529394603166
-Section COMSC123002.sec's GPA is 3.8333333333333335 and the Z-Score is 0.6521250141460649
-Section COMSC123003.sec's GPA is 3.968421052631579 and the Z-Score is 0.9627080810498809
-Section CNST123001.sec's GPA is 3.811764705882353 and the Z-Score is 0.6025361211110021
-Section CNST123002.sec's GPA is 3.2000000000000006 and the Z-Score is -0.8039852086107877
-Section ENGR123001.sec's GPA is 3.7700000000000005 and the Z-Score is 0.5065139918703803
-Section ENGR123002.sec's GPA is 3.6222222222222222 and the Z-Score is 0.16675493989378007
+The GPA of group Combined123.grp is: 3.55
 
 
+Section COMSC123001.sec's GPA is 2.642 and the relevant Z-Score is -2.09
+Section COMSC123002.sec's GPA is 3.833.
+Section COMSC123003.sec's GPA is 3.968.
+Section CNST123001.sec's GPA is 3.812.
+Section CNST123002.sec's GPA is 3.2.
+Section ENGR123001.sec's GPA is 3.77.
+Section ENGR123002.sec's GPA is 3.622.
+
+
+Here are the students with more than one A-, A
+Sekhyny, Jywo
+Sekhyny, Fyu
+Szhmsw, Iuuy
+Dzppysrctzp, Uemyp
+Rkgyxxza, Newtzxey
+Cyxmep, Dzppzx
+Myxz, Pjhkx
+Mepr, Tehkj
+Fwckiuyp, Tjyp
+Pkwc, Ixew
+Uhukemy, Eytcyp
+Skxpyxm, Jzcp
+Dyxepcy, Eewczhya
+Dyxzp, Uhfxkm
+Ryxyoeyp, Jywo
+Rkyprkhea, Jzcp
+Rkaypte, Tsmzhic
+Cyjpka, Itcyp
+Mperct, Dyakj
+Tyuexkl, Tzmkxewo
+Typty, Sxeyp
+Pswwepyxme, Lysh
+Zkcgk, Lytxewo
+Zetcyu, Mjhk
+Wyuygyjyace, Tkpy
+Dckaypko, Jkffxkj
+Ryxkhesa, Sxswk
+Rsgsw, Oeacy
+Qkxxkexy, Eewczhya
+Qhkuepr, Ugeryeh
+Cyxt, Eewczhya
+Mkzcypk, Dzppzx
+Mepr, Hyp
+Kkk, Jyuka
+Oyphkj, Zehheyu
+Oyaakj, Uyxzp
+OwGyxtj, Jzxmyp
+Okpmkhy, Mxeatepy
+Eydyxxz, Lktkx
+Lekikx, Oewcykh
+Lsrahkj, Mytyxepy
+Tswc, Oyttckn
+Fygey, Dzxkj
+Pktxkysht, Jzpytcyp
+Rkawckpka, Jzcp
+Gexzsb, Jyazp
+Czhmkp, Tewcyxm
+Csuyazp, Dzppzx
+Lytkh, Rcydyh
+Tyuexkl, Kysxkp
+Fuyhh, Ugeryeh
+Nyhkpte, Ryxxkhh
+Gyughk, Jywzg
+Gkxacuyp, Eytcyp
+Ozxxeaktt, Jzcp
+Dzaty, Sxjwk
+Rywkj, Tjyp
+Rkaxzaekxa, Eytcyp
+Qygeyp, Gkzxrk
+OwRzpyhm, Uemyp
+Okxxzn, Uukhey
+Flnkw, Eytyhek
+Pzxxka, Uxeypy
+Pshhez, Oyxwz
+Zyhhywk, Tewc
+Sekhyny, Jywo
+Sekhyny, Fyu
+Szhmsw, Iuuy
+Dzppysrctzp, Uemyp
+Rkgyxxza, Newtzxey
+Cyxmep, Dzppzx
+Myxz, Pjhkx
+Mepr, Tehkj
+Fwckiuyp, Tjyp
+Pkwc, Ixew
+Uhukemy, Eytcyp
+Skxpyxm, Jzcp
+Dyxepcy, Eewczhya
+Dyxzp, Uhfxkm
+Ryxyoeyp, Jywo
+Rkyprkhea, Jzcp
+Rkaypte, Tsmzhic
+Cyjpka, Itcyp
+Mperct, Dyakj
+Tyuexkl, Tzmkxewo
+Typty, Sxeyp
+Pswwepyxme, Lysh
+Zkcgk, Lytxewo
+Zetcyu, Mjhk
+Wyuygyjyace, Tkpy
+Dckaypko, Jkffxkj
+Ryxkhesa, Sxswk
+Rsgsw, Oeacy
+Qkxxkexy, Eewczhya
+Qhkuepr, Ugeryeh
+Cyxt, Eewczhya
+Mkzcypk, Dzppzx
+Mepr, Hyp
+Kkk, Jyuka
+Oyphkj, Zehheyu
+Oyaakj, Uyxzp
+OwGyxtj, Jzxmyp
+Okpmkhy, Mxeatepy
+Eydyxxz, Lktkx
+Lekikx, Oewcykh
+Lsrahkj, Mytyxepy
+Tswc, Oyttckn
+Fygey, Dzxkj
+Pktxkysht, Jzpytcyp
+Csjpc, Ns
+Cyjpka, Itcyp
+Dyxsaz, Oyttckn
+Dyxzp, Uhfxkm
+Dzateryp, Ihhy
+Ftsxrea, Ftkkhk
+Gxzaa, Eewczhya
+Lexyepz, Tywckh
+Mkppj, Oykdk
+Oyrepaoj, Fikpwkx
+Ssxrza, Aanyhm
+Uhukemy, Eytcyp
+Wkyn, Uhkbypmkx
+Wyuygyjyace, Tkpy
+Cyxt, Eewczhya
+Dckaypko, Jkffxkj
+Ftznkhh, Rydem
+Qkxxkexy, Eewczhya
+Rsgsw, Oeacy
+Rynazp, Pyppkx
+Uhzvyjhe, Ugmshhyc
+Usrsatep, Uachkj
+Sxkys, Jywvskhepk
+Rkhrxkwz, Cyhkj
+Rkxekplz, Oyxwz
+Qxypohep, Uuj
+Kepaokj, Dzppzx
+Kzprhkj, Uwywey
+OywKkhhyp, Myxy
+Lznkxa, Jshey
+Tzakhhz, Geyppy
+Tzjyh, Jkppy
+Fshhedyp, Gkzxrk
+Zymk, Cyppyc
+Rkawckpka, Jzcp
+Gexzsb, Jyazp
+Czhmkp, Tewcyxm
+Csuyazp, Dzppzx
+Lytkh, Rcydyh
+Tyuexkl, Kysxkp
+Fuyhh, Ugeryeh
+Nyhkpte, Ryxxkhh
+Gexzsb, Jyazp
+Czhmkp, Tewcyxm
+Csuyazp, Dzppzx
+Lytkh, Rcydyh
+Tyuexkl, Kysxkp
+Fuyhh, Ugeryeh
+
+Here are the students with more than one D+, D, D-, F
+Szttzpk, Iheyppy
+Sxzsokx, Oytckn
+Dcyugkxa, Umxeyp
+Lekxwk, Myukxzp
+Tedkxy, Qxypoek
+Lyxokx, Eytcyp
+Dxkyp, Jyazp
+Szttzpk, Iheyppy
+Sxzsokx, Oytckn
+Dcyugkxa, Umxeyp
+Lekxwk, Myukxzp
+Tedkxy, Qxypoek

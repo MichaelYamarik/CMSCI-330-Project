@@ -1,7 +1,7 @@
 ****** Now Showing Group COMSC100.grp ******
 
 
-The GPA of group COMSC100.grp is: 3.334
+The GPA of group COMSC100.grp is: 3.303
 
 
 Section COMSC123001.sec's GPA is 2.642.
@@ -14,10 +14,10 @@ Section COMSC130001.sec's GPA is 3.036.
 ****** Now Showing Group Combined123.grp ******
 
 
-The GPA of group Combined123.grp is: 3.55
+The GPA of group Combined123.grp is: 3.524
 
 
-Section COMSC123001.sec's GPA is 2.642 and the relevant Z-Score is -2.09
+Section COMSC123001.sec's GPA is 2.642 and the relevant Z-Score is -2.03
 Section COMSC123002.sec's GPA is 3.833.
 Section COMSC123003.sec's GPA is 3.968.
 Section CNST123001.sec's GPA is 3.812.
@@ -27,174 +27,119 @@ Section ENGR123002.sec's GPA is 3.622.
 
 
 Here are the students with more than one A-, A
-Sekhyny, Jywo
-Sekhyny, Fyu
-Szhmsw, Iuuy
-Dzppysrctzp, Uemyp
-Rkgyxxza, Newtzxey
-Cyxmep, Dzppzx
-Myxz, Pjhkx
-Mepr, Tehkj
-Fwckiuyp, Tjyp
-Pkwc, Ixew
-Uhukemy, Eytcyp
-Skxpyxm, Jzcp
-Dyxepcy, Eewczhya
-Dyxzp, Uhfxkm
-Ryxyoeyp, Jywo
-Rkyprkhea, Jzcp
-Rkaypte, Tsmzhic
-Cyjpka, Itcyp
-Mperct, Dyakj
-Tyuexkl, Tzmkxewo
-Typty, Sxeyp
-Pswwepyxme, Lysh
-Zkcgk, Lytxewo
-Zetcyu, Mjhk
-Wyuygyjyace, Tkpy
-Dckaypko, Jkffxkj
-Ryxkhesa, Sxswk
-Rsgsw, Oeacy
-Qkxxkexy, Eewczhya
-Qhkuepr, Ugeryeh
-Cyxt, Eewczhya
-Mkzcypk, Dzppzx
-Mepr, Hyp
-Kkk, Jyuka
-Oyphkj, Zehheyu
-Oyaakj, Uyxzp
-OwGyxtj, Jzxmyp
-Okpmkhy, Mxeatepy
-Eydyxxz, Lktkx
-Lekikx, Oewcykh
-Lsrahkj, Mytyxepy
-Tswc, Oyttckn
-Fygey, Dzxkj
-Pktxkysht, Jzpytcyp
-Rkawckpka, Jzcp
-Gexzsb, Jyazp
-Czhmkp, Tewcyxm
-Csuyazp, Dzppzx
-Lytkh, Rcydyh
-Tyuexkl, Kysxkp
-Fuyhh, Ugeryeh
-Nyhkpte, Ryxxkhh
-Gyughk, Jywzg
-Gkxacuyp, Eytcyp
-Ozxxeaktt, Jzcp
-Dzaty, Sxjwk
-Rywkj, Tjyp
-Rkaxzaekxa, Eytcyp
-Qygeyp, Gkzxrk
-OwRzpyhm, Uemyp
-Okxxzn, Uukhey
-Flnkw, Eytyhek
-Pzxxka, Uxeypy
-Pshhez, Oyxwz
-Zyhhywk, Tewc
-Sekhyny, Jywo
-Sekhyny, Fyu
-Szhmsw, Iuuy
-Dzppysrctzp, Uemyp
-Rkgyxxza, Newtzxey
-Cyxmep, Dzppzx
-Myxz, Pjhkx
-Mepr, Tehkj
-Fwckiuyp, Tjyp
-Pkwc, Ixew
-Uhukemy, Eytcyp
-Skxpyxm, Jzcp
-Dyxepcy, Eewczhya
-Dyxzp, Uhfxkm
-Ryxyoeyp, Jywo
-Rkyprkhea, Jzcp
-Rkaypte, Tsmzhic
-Cyjpka, Itcyp
-Mperct, Dyakj
-Tyuexkl, Tzmkxewo
-Typty, Sxeyp
-Pswwepyxme, Lysh
-Zkcgk, Lytxewo
-Zetcyu, Mjhk
-Wyuygyjyace, Tkpy
-Dckaypko, Jkffxkj
-Ryxkhesa, Sxswk
-Rsgsw, Oeacy
-Qkxxkexy, Eewczhya
-Qhkuepr, Ugeryeh
-Cyxt, Eewczhya
-Mkzcypk, Dzppzx
-Mepr, Hyp
-Kkk, Jyuka
-Oyphkj, Zehheyu
-Oyaakj, Uyxzp
-OwGyxtj, Jzxmyp
-Okpmkhy, Mxeatepy
-Eydyxxz, Lktkx
-Lekikx, Oewcykh
-Lsrahkj, Mytyxepy
-Tswc, Oyttckn
-Fygey, Dzxkj
-Pktxkysht, Jzpytcyp
-Csjpc, Ns
-Cyjpka, Itcyp
-Dyxsaz, Oyttckn
-Dyxzp, Uhfxkm
-Dzateryp, Ihhy
-Ftsxrea, Ftkkhk
-Gxzaa, Eewczhya
-Lexyepz, Tywckh
-Mkppj, Oykdk
-Oyrepaoj, Fikpwkx
-Ssxrza, Aanyhm
-Uhukemy, Eytcyp
-Wkyn, Uhkbypmkx
-Wyuygyjyace, Tkpy
-Cyxt, Eewczhya
-Dckaypko, Jkffxkj
-Ftznkhh, Rydem
-Qkxxkexy, Eewczhya
-Rsgsw, Oeacy
-Rynazp, Pyppkx
-Uhzvyjhe, Ugmshhyc
-Usrsatep, Uachkj
-Sxkys, Jywvskhepk
-Rkhrxkwz, Cyhkj
-Rkxekplz, Oyxwz
-Qxypohep, Uuj
-Kepaokj, Dzppzx
-Kzprhkj, Uwywey
-OywKkhhyp, Myxy
-Lznkxa, Jshey
-Tzakhhz, Geyppy
-Tzjyh, Jkppy
-Fshhedyp, Gkzxrk
-Zymk, Cyppyc
-Rkawckpka, Jzcp
-Gexzsb, Jyazp
-Czhmkp, Tewcyxm
-Csuyazp, Dzppzx
-Lytkh, Rcydyh
-Tyuexkl, Kysxkp
-Fuyhh, Ugeryeh
-Nyhkpte, Ryxxkhh
-Gexzsb, Jyazp
-Czhmkp, Tewcyxm
-Csuyazp, Dzppzx
-Lytkh, Rcydyh
-Tyuexkl, Kysxkp
-Fuyhh, Ugeryeh
+Cyxmep, Dzppzx: COMSC123001.sec, COMSC123001.sec
+                                                                                
+Dyxepcy, Eewczhya: COMSC123002.sec, COMSC123002.sec
+                                                                                
+Dzppysrctzp, Uemyp: COMSC123001.sec, COMSC123001.sec
+                                                                                
+Eydyxxz, Lktkx: COMSC123003.sec, COMSC123003.sec
+                                                                                
+Fwckiuyp, Tjyp: COMSC123001.sec, COMSC123001.sec
+                                                                                
+Fygey, Dzxkj: COMSC123003.sec, COMSC123003.sec
+                                                                                
+Kkk, Jyuka: COMSC123003.sec, COMSC123003.sec
+                                                                                
+Lekikx, Oewcykh: COMSC123003.sec, COMSC123003.sec
+                                                                                
+Lsrahkj, Mytyxepy: COMSC123003.sec, COMSC123003.sec
+                                                                                
+Mepr, Hyp: COMSC123003.sec, COMSC123003.sec
+                                                                                
+Mepr, Tehkj: COMSC123001.sec, COMSC123001.sec
+                                                                                
+Mkzcypk, Dzppzx: COMSC123003.sec, COMSC123003.sec
+                                                                                
+Mperct, Dyakj: COMSC123002.sec, COMSC123002.sec
+                                                                                
+Myxz, Pjhkx: COMSC123001.sec, COMSC123001.sec
+                                                                                
+Nyhkpte, Ryxxkhh: COMSC125001.sec, ENGR123002.sec
+                                                                                
+Okpmkhy, Mxeatepy: COMSC123003.sec, COMSC123003.sec
+                                                                                
+OwGyxtj, Jzxmyp: COMSC123003.sec, COMSC123003.sec
+                                                                                
+Oyaakj, Uyxzp: COMSC123003.sec, COMSC123003.sec
+                                                                                
+Oyphkj, Zehheyu: COMSC123003.sec, COMSC123003.sec
+                                                                                
+Pktxkysht, Jzpytcyp: COMSC123003.sec, COMSC123003.sec
+                                                                                
+Pkwc, Ixew: COMSC123001.sec, COMSC123001.sec
+                                                                                
+Pswwepyxme, Lysh: COMSC123002.sec, COMSC123002.sec
+                                                                                
+Qhkuepr, Ugeryeh: COMSC123003.sec, COMSC123003.sec
+                                                                                
+Rkawckpka, Jzcp: COMSC125001.sec, ENGR123002.sec
+                                                                                
+Rkaypte, Tsmzhic: COMSC123002.sec, COMSC123002.sec
+                                                                                
+Rkgyxxza, Newtzxey: COMSC123001.sec, COMSC123001.sec
+                                                                                
+Rkyprkhea, Jzcp: COMSC123002.sec, COMSC123002.sec
+                                                                                
+Ryxkhesa, Sxswk: COMSC123003.sec, COMSC123003.sec
+                                                                                
+Ryxyoeyp, Jywo: COMSC123002.sec, COMSC123002.sec
+                                                                                
+Sekhyny, Fyu: COMSC123001.sec, COMSC123001.sec
+                                                                                
+Sekhyny, Jywo: COMSC123001.sec, COMSC123001.sec
+                                                                                
+Skxpyxm, Jzcp: COMSC123002.sec, COMSC123002.sec
+                                                                                
+Szhmsw, Iuuy: COMSC123001.sec, COMSC123001.sec
+                                                                                
+Tswc, Oyttckn: COMSC123003.sec, COMSC123003.sec
+                                                                                
+Typty, Sxeyp: COMSC123002.sec, COMSC123002.sec
+                                                                                
+Tyuexkl, Tzmkxewo: COMSC123002.sec, COMSC123002.sec
+                                                                                
+Zetcyu, Mjhk: COMSC123002.sec, COMSC123002.sec
+                                                                                
+Zkcgk, Lytxewo: COMSC123002.sec, COMSC123002.sec
+                                                                                
+Csuyazp, Dzppzx: COMSC125001.sec, ENGR123002.sec, ENGR123002.sec
+                                                                                
+Cyjpka, Itcyp: COMSC123002.sec, COMSC123002.sec, CNST123001.sec
+                                                                                
+Cyxt, Eewczhya: COMSC123003.sec, COMSC123003.sec, CNST123002.sec
+                                                                                
+Czhmkp, Tewcyxm: COMSC125001.sec, ENGR123002.sec, ENGR123002.sec
+                                                                                
+Dckaypko, Jkffxkj: COMSC123003.sec, COMSC123003.sec, CNST123002.sec
+                                                                                
+Dyxzp, Uhfxkm: COMSC123002.sec, COMSC123002.sec, CNST123001.sec
+                                                                                
+Fuyhh, Ugeryeh: COMSC125001.sec, ENGR123002.sec, ENGR123002.sec
+                                                                                
+Gexzsb, Jyazp: COMSC125001.sec, ENGR123002.sec, ENGR123002.sec
+                                                                                
+Lytkh, Rcydyh: COMSC125001.sec, ENGR123002.sec, ENGR123002.sec
+                                                                                
+Qkxxkexy, Eewczhya: COMSC123003.sec, COMSC123003.sec, CNST123002.sec
+                                                                                
+Rsgsw, Oeacy: COMSC123003.sec, COMSC123003.sec, CNST123002.sec
+                                                                                
+Tyuexkl, Kysxkp: COMSC125001.sec, ENGR123002.sec, ENGR123002.sec
+                                                                                
+Uhukemy, Eytcyp: COMSC123002.sec, COMSC123002.sec, CNST123001.sec
+                                                                                
+Wyuygyjyace, Tkpy: COMSC123002.sec, COMSC123002.sec, CNST123001.sec
+                                                                                
 
 Here are the students with more than one D+, D, D-, F
-Szttzpk, Iheyppy
-Sxzsokx, Oytckn
-Dcyugkxa, Umxeyp
-Lekxwk, Myukxzp
-Tedkxy, Qxypoek
-Lyxokx, Eytcyp
-Dxkyp, Jyazp
-Szttzpk, Iheyppy
-Sxzsokx, Oytckn
-Dcyugkxa, Umxeyp
-Lekxwk, Myukxzp
-Tedkxy, Qxypoek
+Dcyugkxa, Umxeyp: COMSC123001.sec, COMSC123001.sec
+                                                                                
+Lekxwk, Myukxzp: COMSC123001.sec, COMSC123001.sec
+                                                                                
+Sxzsokx, Oytckn: COMSC123001.sec, COMSC123001.sec
+                                                                                
+Szttzpk, Iheyppy: COMSC123001.sec, COMSC123001.sec
+                                                                                
+Tedkxy, Qxypoek: COMSC123001.sec, COMSC123001.sec
+                                                                                

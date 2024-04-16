@@ -1,3 +1,4 @@
+# all the imports
 import numpy as np
 import pandas as pd
 from collections import Counter
@@ -5,9 +6,9 @@ import tkinter as tk
 from tkinter import filedialog
 import os
 
-# Functions
 
-#globals
+
+# # globals (ALL GLOBALS ARE DELETED THROUGHOUT THE FUNCTION TO ENSURE THAT NONE REMAIN AT THE END OF RUNTIME)
 
 temp_sec = []
 
@@ -27,7 +28,7 @@ df_help = pd.DataFrame(columns=['Student','Courses'])
 
 def create_GRP(run): 
     
-    #print(f"\nCurrently Displaying: {run}  ************\n")
+   
     #creates temp array that takes in a run file
     
     data = []  
@@ -148,7 +149,7 @@ def letter_to_number(letterGrade):
 def calc_SEC_GPA(array, course):
     global df
     global df_help
-    #print(f"\nCurrently Displaying: GPA  ************\n")
+   
     #assigns credit hours to a variable
     credit = array[-1]
     #creates the data temp array
@@ -165,7 +166,7 @@ def calc_SEC_GPA(array, course):
                 summy = np.append(summy, val)
     #calculations for the GPA
     summy = summy * credit
-    #prints the GPA of the section
+    
 
     
     students_to_append = []
@@ -177,38 +178,22 @@ def calc_SEC_GPA(array, course):
             temp_grade = y[2]
             temp_class = course
             
-            print(f"Studend: {temp_student}, Grade: {temp_grade}, Course: {temp_class}")
-            
             if temp_grade is not None:
-                
                 
                     if temp_grade >= 3.7:
                     
                             students_to_append.append({'Student': temp_student, 'Courses': temp_class})
                     elif temp_grade <= 1.3:
                         
-                            help_append.append({'Student': temp_student, 'Courses': temp_class})
-                
-                
+                            help_append.append({'Student': temp_student, 'Courses': temp_class})   
     
     df_temp = pd.DataFrame(students_to_append)
     
     df_help_temp = pd.DataFrame(help_append)
         
-    print(f"\n\n DATAFRAME TO APPEND TO df\n")
-    print(df_temp)
-    
-    print(f"\n\n DATAFRAME TO APPEND TO df_help\n")
-    print(df_help_temp)
-        
     df = pd.concat([df, df_temp], ignore_index=True)
+    
     df_help = pd.concat([df_help, df_help_temp], ignore_index=True)
-    
-    print(f"\n\n DATAFRAME GOOD STUDENTS\n")
-    print(df)
-    
-    print(f"\n\nDATAFRAME BAD STUDENTS\n")
-    print(df_help)
                
     newGPA = (np.sum(summy))/(credit*np.size(summy))
     
@@ -216,21 +201,11 @@ def calc_SEC_GPA(array, course):
     
     return newGPA, credit
     
-    
 #function to start the whole thing  
 
 def empty_list(array):
     global temp_sec
     temp_sec.clear()
-
-
-'''
-def remove_non_duplicates(array):
-    name_counts = Counter(student[0] for student in array)
-    duplicates = [name for name, count in name_counts.items() if count > 1]
-    filtered_array = [student for student in array if student[0] in duplicates]
-    return filtered_array
-'''
 
 def calc_Group_GPA(gpas, creds):
     
@@ -246,11 +221,22 @@ def calc_Group_GPA(gpas, creds):
     return groupGPA
 
 def begin(run):
+    
+    
     file = open('GPA_Results.txt', 'w')
-    empty_list(temp_sec)
+    
+    
     array = create_GRP(run)
+    empty_list(temp_sec)
     update_text("Getting the Groups...")
     update_text("Calculating the SEC GPA's...")
+    
+    
+    
+    
+    
+    group_GPAs = []
+    
     
     for x in array[1:]:
         file.write(f"****** Now Showing Group {x} ******\n\n")
@@ -259,7 +245,9 @@ def begin(run):
         std_dev = 0
         sec_gps = []
         temp_credit = []
+        
         empty_list(temp_sec)
+        
         for y in temp[1:]:
             temptwo = create_students(y)
             sectempgpa, temp_cred = calc_SEC_GPA(temptwo, y)
@@ -267,10 +255,21 @@ def begin(run):
             temp_credit.append(temp_cred)
             std_dev = np.std(temp_sec)
         
+        
+        
         temp_GROUP = calc_Group_GPA(sec_gps, temp_credit)
+        group_GPAs.append(temp_GROUP)
+        
+        
+        
         file.write(f"\nThe GPA of group {x} is: {round(temp_GROUP,3)}\n\n")
         newtemp = create_SEC(x)
         newcount = 0
+        
+        '''
+        FAST FUNCTION BABY
+        '''
+        
         for g in newtemp[1:]:
             empty_list(temp_sec)
             newsectemp = sec_gps[newcount]
@@ -278,57 +277,70 @@ def begin(run):
             z_score = (newsectemp - temp_GROUP) / std_dev
             file.write(f"\nSection {g}'s GPA is {round(newsectemp,3)}") 
             if z_score >= 2 or z_score <= -2:
-                file.write(f" and the relevant Z-Score is {round(z_score,2)}")
+                file.write(f" which is different from the Group GPA by a Z-Score of {round(z_score,2)}")
             else:
                 file.write(".")
         file.write("\n\n")
     
+    
+    
+    temp_av = sum(group_GPAs) / len(group_GPAs)
+    
+    
+    temp_grp_std = 0
+    temp_grp_std = np.std(group_GPAs)
+    
+    '''
+    FAST FUNCTION BABY
+    '''
+    
+    for x in group_GPAs:
+        temp_gpa = x
+        temp_Z_score = (temp_gpa - temp_av) / temp_grp_std
+        if temp_Z_score > 2.0 or temp_Z_score < -2:
+            file.write(f"\n\n Group {x} standard deviation is significant to the group, Z_Score = {temp_Z_score}")
+    
+    
     update_text("Getting Relevant Students...")
     
-    # Grouping by 'Student' and aggregating 'Courses' for good students
+    
+    #creates a new array that groups the array of students that got very good grades and resets the index
     df_grouped_good = df.groupby('Student')['Courses'].agg(', '.join).reset_index()
     
-    # Counting the number of courses for each good student
+    #creates a new column that is the number of courses a student has (for sorting by the amount of courses)
     df_grouped_good['Num_Courses'] = df_grouped_good['Courses'].apply(lambda x: len(x.split(', ')))
     
-    # Filtering out good students with less than 2 courses
+    #creates a new filtered array that filters out the students with only 1 very good grade
     df_filtered_good = df_grouped_good[df_grouped_good['Num_Courses'] >= 2]
     
-    # Sorting the good students based on the number of courses and then alphabetically
+    #sorts the array by the number of courses
     df_filtered_good = df_filtered_good.sort_values(by=['Num_Courses', 'Student'])
     
-    # Dropping the 'Num_Courses' column for good students as it's no longer needed
+    #then removes the column because it is no longer necessary
     df_filtered_good = df_filtered_good.drop(columns=['Num_Courses'])
     
-    # Grouping by 'Student' and aggregating 'Courses' for students who need help
+    #does the same thing as above except for the students with bad grades
     df_grouped_help = df_help.groupby('Student')['Courses'].agg(', '.join).reset_index()
-    
-    # Counting the number of courses for each student who needs help
     df_grouped_help['Num_Courses'] = df_grouped_help['Courses'].apply(lambda x: len(x.split(', ')))
-    
-    # Filtering out students who need help with less than 2 courses
     df_filtered_help = df_grouped_help[df_grouped_help['Num_Courses'] >= 2]
-    
-    # Sorting the students who need help based on the number of courses and then alphabetically
     df_filtered_help = df_filtered_help.sort_values(by=['Num_Courses', 'Student'])
-    
-    # Dropping the 'Num_Courses' column for students who need help as it's no longer needed
     df_filtered_help = df_filtered_help.drop(columns=['Num_Courses'])
     
     update_text("Printing...")
     
-    file.write(f"\nHere are the students with more than one A-, A\n")
+    file.write(f"\nHere are the students with more than one A-, A\n\n")
     for index, row in df_filtered_good.iterrows():
-        file.write(row['Student'] + ': ' + row['Courses'] + '\n')
+        file.write(row['Student'] + ' || ' + row['Courses'] + '\n')
         file.write(' ' * 80 + '\n')
     
-    file.write(f"\nHere are the students with more than one D+, D, D-, F\n")
+    file.write(f"\nHere are the students with more than one D+, D, D-, F\n\n")
     for index, row in df_filtered_help.iterrows():
-        file.write(row['Student'] + ': ' + row['Courses'] + '\n')
+        file.write(row['Student'] + ' || ' + row['Courses'] + '\n')
         file.write(' ' * 80 + '\n')
-        
+    
+    update_text("Removing existing data...")
+    
     update_text("DONE! Please go to the file location of the .RUN file for the .txt file!")
-
 
 window = tk.Tk()
 window.title("GPA Project Calculator")
@@ -338,10 +350,23 @@ run_file = ""
 
 def upload_file():
     file_path = filedialog.askopenfilename(filetypes=[("Runnable Files", "*.run")])
-    print("Selected file:", file_path)
+   
     run_file = file_path
+    
+    print("Start")
     begin(run_file)
-
+    
+    # removes all the data from the GLOBAL VARIABLES
+    
+    empty_list(temp_sec)
+    empty_list(temp_students)
+    empty_list(temp_bad_students)
+    empty_list(temp_group_GPA)
+    df = pd.DataFrame()
+    df_help = pd.DataFrame()
+    
+    
+    
 
 def go_to_text():
     file_name = "GPA_Results.txt"
@@ -350,7 +375,6 @@ def go_to_text():
         os.system(notepad_command)
     except FileNotFoundError:
         update_text("Error: Could not open the .txt file. Go directly to directory.")
-    
 
 upload_button = tk.Button(window, text="Upload .run File", command=upload_file)
 upload_button.pack(pady=20)
@@ -370,8 +394,6 @@ update_text("Please select the .RUN file you want to use!")
 window.mainloop()
 
 #Use any .run file you want
-
-
 
 '''
 3 SIGNIFICANT DIGITS

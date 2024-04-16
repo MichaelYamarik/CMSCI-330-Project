@@ -17,7 +17,7 @@ Section COMSC130001.sec's GPA is 3.036.
 The GPA of group Combined123.grp is: 3.524
 
 
-Section COMSC123001.sec's GPA is 2.642 and the relevant Z-Score is -2.03
+Section COMSC123001.sec's GPA is 2.642 which is different from the Group GPA by a Z-Score of -2.03
 Section COMSC123002.sec's GPA is 3.833.
 Section COMSC123003.sec's GPA is 3.968.
 Section CNST123001.sec's GPA is 3.812.
@@ -27,119 +27,121 @@ Section ENGR123002.sec's GPA is 3.622.
 
 
 Here are the students with more than one A-, A
-Cyxmep, Dzppzx: COMSC123001.sec, COMSC123001.sec
+
+Cyxmep, Dzppzx || COMSC123001.sec, COMSC123001.sec
                                                                                 
-Dyxepcy, Eewczhya: COMSC123002.sec, COMSC123002.sec
+Dyxepcy, Eewczhya || COMSC123002.sec, COMSC123002.sec
                                                                                 
-Dzppysrctzp, Uemyp: COMSC123001.sec, COMSC123001.sec
+Dzppysrctzp, Uemyp || COMSC123001.sec, COMSC123001.sec
                                                                                 
-Eydyxxz, Lktkx: COMSC123003.sec, COMSC123003.sec
+Eydyxxz, Lktkx || COMSC123003.sec, COMSC123003.sec
                                                                                 
-Fwckiuyp, Tjyp: COMSC123001.sec, COMSC123001.sec
+Fwckiuyp, Tjyp || COMSC123001.sec, COMSC123001.sec
                                                                                 
-Fygey, Dzxkj: COMSC123003.sec, COMSC123003.sec
+Fygey, Dzxkj || COMSC123003.sec, COMSC123003.sec
                                                                                 
-Kkk, Jyuka: COMSC123003.sec, COMSC123003.sec
+Kkk, Jyuka || COMSC123003.sec, COMSC123003.sec
                                                                                 
-Lekikx, Oewcykh: COMSC123003.sec, COMSC123003.sec
+Lekikx, Oewcykh || COMSC123003.sec, COMSC123003.sec
                                                                                 
-Lsrahkj, Mytyxepy: COMSC123003.sec, COMSC123003.sec
+Lsrahkj, Mytyxepy || COMSC123003.sec, COMSC123003.sec
                                                                                 
-Mepr, Hyp: COMSC123003.sec, COMSC123003.sec
+Mepr, Hyp || COMSC123003.sec, COMSC123003.sec
                                                                                 
-Mepr, Tehkj: COMSC123001.sec, COMSC123001.sec
+Mepr, Tehkj || COMSC123001.sec, COMSC123001.sec
                                                                                 
-Mkzcypk, Dzppzx: COMSC123003.sec, COMSC123003.sec
+Mkzcypk, Dzppzx || COMSC123003.sec, COMSC123003.sec
                                                                                 
-Mperct, Dyakj: COMSC123002.sec, COMSC123002.sec
+Mperct, Dyakj || COMSC123002.sec, COMSC123002.sec
                                                                                 
-Myxz, Pjhkx: COMSC123001.sec, COMSC123001.sec
+Myxz, Pjhkx || COMSC123001.sec, COMSC123001.sec
                                                                                 
-Nyhkpte, Ryxxkhh: COMSC125001.sec, ENGR123002.sec
+Nyhkpte, Ryxxkhh || COMSC125001.sec, ENGR123002.sec
                                                                                 
-Okpmkhy, Mxeatepy: COMSC123003.sec, COMSC123003.sec
+Okpmkhy, Mxeatepy || COMSC123003.sec, COMSC123003.sec
                                                                                 
-OwGyxtj, Jzxmyp: COMSC123003.sec, COMSC123003.sec
+OwGyxtj, Jzxmyp || COMSC123003.sec, COMSC123003.sec
                                                                                 
-Oyaakj, Uyxzp: COMSC123003.sec, COMSC123003.sec
+Oyaakj, Uyxzp || COMSC123003.sec, COMSC123003.sec
                                                                                 
-Oyphkj, Zehheyu: COMSC123003.sec, COMSC123003.sec
+Oyphkj, Zehheyu || COMSC123003.sec, COMSC123003.sec
                                                                                 
-Pktxkysht, Jzpytcyp: COMSC123003.sec, COMSC123003.sec
+Pktxkysht, Jzpytcyp || COMSC123003.sec, COMSC123003.sec
                                                                                 
-Pkwc, Ixew: COMSC123001.sec, COMSC123001.sec
+Pkwc, Ixew || COMSC123001.sec, COMSC123001.sec
                                                                                 
-Pswwepyxme, Lysh: COMSC123002.sec, COMSC123002.sec
+Pswwepyxme, Lysh || COMSC123002.sec, COMSC123002.sec
                                                                                 
-Qhkuepr, Ugeryeh: COMSC123003.sec, COMSC123003.sec
+Qhkuepr, Ugeryeh || COMSC123003.sec, COMSC123003.sec
                                                                                 
-Rkawckpka, Jzcp: COMSC125001.sec, ENGR123002.sec
+Rkawckpka, Jzcp || COMSC125001.sec, ENGR123002.sec
                                                                                 
-Rkaypte, Tsmzhic: COMSC123002.sec, COMSC123002.sec
+Rkaypte, Tsmzhic || COMSC123002.sec, COMSC123002.sec
                                                                                 
-Rkgyxxza, Newtzxey: COMSC123001.sec, COMSC123001.sec
+Rkgyxxza, Newtzxey || COMSC123001.sec, COMSC123001.sec
                                                                                 
-Rkyprkhea, Jzcp: COMSC123002.sec, COMSC123002.sec
+Rkyprkhea, Jzcp || COMSC123002.sec, COMSC123002.sec
                                                                                 
-Ryxkhesa, Sxswk: COMSC123003.sec, COMSC123003.sec
+Ryxkhesa, Sxswk || COMSC123003.sec, COMSC123003.sec
                                                                                 
-Ryxyoeyp, Jywo: COMSC123002.sec, COMSC123002.sec
+Ryxyoeyp, Jywo || COMSC123002.sec, COMSC123002.sec
                                                                                 
-Sekhyny, Fyu: COMSC123001.sec, COMSC123001.sec
+Sekhyny, Fyu || COMSC123001.sec, COMSC123001.sec
                                                                                 
-Sekhyny, Jywo: COMSC123001.sec, COMSC123001.sec
+Sekhyny, Jywo || COMSC123001.sec, COMSC123001.sec
                                                                                 
-Skxpyxm, Jzcp: COMSC123002.sec, COMSC123002.sec
+Skxpyxm, Jzcp || COMSC123002.sec, COMSC123002.sec
                                                                                 
-Szhmsw, Iuuy: COMSC123001.sec, COMSC123001.sec
+Szhmsw, Iuuy || COMSC123001.sec, COMSC123001.sec
                                                                                 
-Tswc, Oyttckn: COMSC123003.sec, COMSC123003.sec
+Tswc, Oyttckn || COMSC123003.sec, COMSC123003.sec
                                                                                 
-Typty, Sxeyp: COMSC123002.sec, COMSC123002.sec
+Typty, Sxeyp || COMSC123002.sec, COMSC123002.sec
                                                                                 
-Tyuexkl, Tzmkxewo: COMSC123002.sec, COMSC123002.sec
+Tyuexkl, Tzmkxewo || COMSC123002.sec, COMSC123002.sec
                                                                                 
-Zetcyu, Mjhk: COMSC123002.sec, COMSC123002.sec
+Zetcyu, Mjhk || COMSC123002.sec, COMSC123002.sec
                                                                                 
-Zkcgk, Lytxewo: COMSC123002.sec, COMSC123002.sec
+Zkcgk, Lytxewo || COMSC123002.sec, COMSC123002.sec
                                                                                 
-Csuyazp, Dzppzx: COMSC125001.sec, ENGR123002.sec, ENGR123002.sec
+Csuyazp, Dzppzx || COMSC125001.sec, ENGR123002.sec, ENGR123002.sec
                                                                                 
-Cyjpka, Itcyp: COMSC123002.sec, COMSC123002.sec, CNST123001.sec
+Cyjpka, Itcyp || COMSC123002.sec, COMSC123002.sec, CNST123001.sec
                                                                                 
-Cyxt, Eewczhya: COMSC123003.sec, COMSC123003.sec, CNST123002.sec
+Cyxt, Eewczhya || COMSC123003.sec, COMSC123003.sec, CNST123002.sec
                                                                                 
-Czhmkp, Tewcyxm: COMSC125001.sec, ENGR123002.sec, ENGR123002.sec
+Czhmkp, Tewcyxm || COMSC125001.sec, ENGR123002.sec, ENGR123002.sec
                                                                                 
-Dckaypko, Jkffxkj: COMSC123003.sec, COMSC123003.sec, CNST123002.sec
+Dckaypko, Jkffxkj || COMSC123003.sec, COMSC123003.sec, CNST123002.sec
                                                                                 
-Dyxzp, Uhfxkm: COMSC123002.sec, COMSC123002.sec, CNST123001.sec
+Dyxzp, Uhfxkm || COMSC123002.sec, COMSC123002.sec, CNST123001.sec
                                                                                 
-Fuyhh, Ugeryeh: COMSC125001.sec, ENGR123002.sec, ENGR123002.sec
+Fuyhh, Ugeryeh || COMSC125001.sec, ENGR123002.sec, ENGR123002.sec
                                                                                 
-Gexzsb, Jyazp: COMSC125001.sec, ENGR123002.sec, ENGR123002.sec
+Gexzsb, Jyazp || COMSC125001.sec, ENGR123002.sec, ENGR123002.sec
                                                                                 
-Lytkh, Rcydyh: COMSC125001.sec, ENGR123002.sec, ENGR123002.sec
+Lytkh, Rcydyh || COMSC125001.sec, ENGR123002.sec, ENGR123002.sec
                                                                                 
-Qkxxkexy, Eewczhya: COMSC123003.sec, COMSC123003.sec, CNST123002.sec
+Qkxxkexy, Eewczhya || COMSC123003.sec, COMSC123003.sec, CNST123002.sec
                                                                                 
-Rsgsw, Oeacy: COMSC123003.sec, COMSC123003.sec, CNST123002.sec
+Rsgsw, Oeacy || COMSC123003.sec, COMSC123003.sec, CNST123002.sec
                                                                                 
-Tyuexkl, Kysxkp: COMSC125001.sec, ENGR123002.sec, ENGR123002.sec
+Tyuexkl, Kysxkp || COMSC125001.sec, ENGR123002.sec, ENGR123002.sec
                                                                                 
-Uhukemy, Eytcyp: COMSC123002.sec, COMSC123002.sec, CNST123001.sec
+Uhukemy, Eytcyp || COMSC123002.sec, COMSC123002.sec, CNST123001.sec
                                                                                 
-Wyuygyjyace, Tkpy: COMSC123002.sec, COMSC123002.sec, CNST123001.sec
+Wyuygyjyace, Tkpy || COMSC123002.sec, COMSC123002.sec, CNST123001.sec
                                                                                 
 
 Here are the students with more than one D+, D, D-, F
-Dcyugkxa, Umxeyp: COMSC123001.sec, COMSC123001.sec
+
+Dcyugkxa, Umxeyp || COMSC123001.sec, COMSC123001.sec
                                                                                 
-Lekxwk, Myukxzp: COMSC123001.sec, COMSC123001.sec
+Lekxwk, Myukxzp || COMSC123001.sec, COMSC123001.sec
                                                                                 
-Sxzsokx, Oytckn: COMSC123001.sec, COMSC123001.sec
+Sxzsokx, Oytckn || COMSC123001.sec, COMSC123001.sec
                                                                                 
-Szttzpk, Iheyppy: COMSC123001.sec, COMSC123001.sec
+Szttzpk, Iheyppy || COMSC123001.sec, COMSC123001.sec
                                                                                 
-Tedkxy, Qxypoek: COMSC123001.sec, COMSC123001.sec
+Tedkxy, Qxypoek || COMSC123001.sec, COMSC123001.sec
                                                                                 

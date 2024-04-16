@@ -6,8 +6,6 @@ import tkinter as tk
 from tkinter import filedialog
 import os
 
-
-
 # # globals (ALL GLOBALS ARE DELETED THROUGHOUT THE FUNCTION TO ENSURE THAT NONE REMAIN AT THE END OF RUNTIME)
 
 temp_sec = []
@@ -257,14 +255,9 @@ run_file = ""
 # Outputs are: None
 def upload_file():
     file_path = filedialog.askopenfilename(filetypes=[("Runnable Files", "*.run")])
-   
     run_file = file_path
-    
     print("Start")
     begin(run_file)
-    
-    # removes all the data from the GLOBAL VARIABLES
-    
     empty_list(temp_sec)
     empty_list(temp_students)
     empty_list(temp_bad_students)
@@ -278,8 +271,7 @@ def upload_file():
 def go_to_text():
     file_name = "GPA_Results.txt"
     try:
-        notepad_command = f"notepad {file_name}"
-        os.system(notepad_command)
+        os.system(f"notepad {file_name}")
     except FileNotFoundError:
         update_text("Error: Could not open the .txt file. Go directly to directory.")
 

@@ -11,119 +11,71 @@ import os
 # # globals (ALL GLOBALS ARE DELETED THROUGHOUT THE FUNCTION TO ENSURE THAT NONE REMAIN AT THE END OF RUNTIME)
 
 temp_sec = []
-
 temp_students = []
-
 temp_bad_students = []
-
 temp_group_GPA = []
-
 df = pd.DataFrame(columns=['Student','Courses'])
-
 df_help = pd.DataFrame(columns=['Student','Courses'])
 
-# # Creating 2D arrays from a group, 2D is for the sections
+# # FUNCTIONS
 
-# Function for assigning Groups to RUN files
-
+# This function creates and array of group variables from the .RUN files.
+# Inputs are: a .RUN file
+# Outputs are: an array of .GRP files
 def create_GRP(run): 
-    
-   
-    #creates temp array that takes in a run file
-    
     data = []  
-
-    #opens up the file
     with open(run) as file:
-        
-        #begins to read lines in file
         line = file.readlines()
-        
-        #for loop to loop through the lines  
         for x in line:
-            
-            #removes white space
             x = x.strip()
-            
-            #checks whether or not a .GRP file exists
             data.append(x)
-            
-    #returns the array
     return np.array(data)
 
-# Functions for assigning Sections to Groups
+# This function creates an array of .SEC files from the .GRP file
+# Inputs are: a .GRP file
+# Outputs are: an array of .SEC files
 def create_SEC(grp):
-    
-    #creates a temp array
     data = []
-    
-    #opens the group file
     with open(grp) as file:
-        
-        #begins reading lines
         line = file.readlines()
-        
-        #for loop to loop through the line
         for x in line:
-            
-            #strips the white space
             x = x.strip()
-            
-            #checks if there is a section file
             data.append(x)
-            
-    #returns the array to the 
     return np.array(data)
 
-#creates an array for the students
+# This function creates students from the .SEC file
+# Inputs are: a .SEC file
+# Outputs are: an array of students
 def create_students(sec):
-    
-    #creates a temp array
     data = []
     
-    #opens up the section file to read
     with open(sec, 'r') as file:
-        
-        #reads the first line and adds it to the array
         temp = file.readline()
         
-        #for loop
         for x in file:
-            
-            #strips the white space and the quotes
             val = x.strip().strip('"').split('","')
-            
-            #appends data to the array
             if len(val) != 3:
                 pass
             else:
                 data.append(val)
-        #finds out what the credit hours are
         if temp.strip().endswith('3.0'):
             temp = 3.0
         elif temp.strip().endswith('3'):
             temp = 3.0
         else:
             temp = 4.0
-        #appends the data to the data array
         data.append(temp)
-    #the second for loop is for assigning the letter to number function to the third value of each array column
-    
+        
     for x in data[:-1]:
-        
         val=x[2]
-        
-        #calls the letter to num function to convert grade letter to number
         point = letter_to_number(val)
         x[2]=point
-    #returns the array
     return data
 
-# Function for assigning letters to GPA numbers
+# This function converts a lettergrade to a numerical value. all I's W's P's and NP's are converted to None.
+# Inputs are: a letter Grade
+# Outputs are: a numerical value for the letter grade
 def letter_to_number(letterGrade):
-    
-    
-    #long list of values for each possible grade
     gpaLetter = {
         'A': 4.0,
         'A-': 3.7,
@@ -141,102 +93,75 @@ def letter_to_number(letterGrade):
         'P': None,  
         'NP': None
     }
-    
-    #returns a get function to see what the inputted letter is related to for GPA's
     return gpaLetter.get(letterGrade,None)
 
-#function for finding the GPA. Uses an array
+# This function caculates the section GPAs for each section
+# Inputs are: An array of students from a section, and the name of the Course
+# Outputs are: The section GPA and the amount of credits for the class
 def calc_SEC_GPA(array, course):
     global df
     global df_help
-   
-    #assigns credit hours to a variable
     credit = array[-1]
-    #creates the data temp array
     data = []
-    #only takes in the values, not the credit hours
     data.append(array[:-1])
-    #creates an empty temp numpy array
     summy = np.empty((0,0))
-    #for loop to loop through specifically the grade numbers
     for x in data:
         for y in x:
             val = y[2]
             if isinstance(val, float):
                 summy = np.append(summy, val)
-    #calculations for the GPA
     summy = summy * credit
-    
-
-    
     students_to_append = []
     help_append = []
     
     for x in data:
+        
         for y in x:
             temp_student = y[0]
             temp_grade = y[2]
             temp_class = course
-            
             if temp_grade is not None:
-                
                     if temp_grade >= 3.7:
-                    
-                            students_to_append.append({'Student': temp_student, 'Courses': temp_class})
+                        students_to_append.append({'Student': temp_student, 'Courses': temp_class})
                     elif temp_grade <= 1.3:
-                        
-                            help_append.append({'Student': temp_student, 'Courses': temp_class})   
-    
+                        help_append.append({'Student': temp_student, 'Courses': temp_class})   
     df_temp = pd.DataFrame(students_to_append)
-    
-    df_help_temp = pd.DataFrame(help_append)
-        
+    df_help_temp = pd.DataFrame(help_append) 
     df = pd.concat([df, df_temp], ignore_index=True)
-    
     df_help = pd.concat([df_help, df_help_temp], ignore_index=True)
-               
     newGPA = (np.sum(summy))/(credit*np.size(summy))
-    
     temp_sec.append(newGPA)
-    
     return newGPA, credit
     
-#function to start the whole thing  
-
+# This function empties an array, particularly for emptying the GLOBAL variables after they have been used
+# Inputs are: an array
+# Outputs are: an empty version of that array
 def empty_list(array):
-    global temp_sec
-    temp_sec.clear()
-
-def calc_Group_GPA(gpas, creds):
+    array.clear()
     
+# This function calculates the GPA of the group
+# Inputs are: gpas for the section, and the credits for the sections
+# Outputs are: the group GPA
+def calc_Group_GPA(gpas, creds):
     gps = 0
     chs = 0
-    
     for x, y in zip(gpas, creds):
         temp = x * y
         gps += temp
-        chs += y
-        
+        chs += y 
     groupGPA = gps / chs
     return groupGPA
 
+# This function starts the full run of things
+# Inputs are: a .RUN file
+# Outputs are: 
 def begin(run):
-    
-    
     file = open('GPA_Results.txt', 'w')
-    
-    
     array = create_GRP(run)
     empty_list(temp_sec)
     update_text("Getting the Groups...")
     update_text("Calculating the SEC GPA's...")
-    
-    
-    
-    
-    
     group_GPAs = []
-    
     
     for x in array[1:]:
         file.write(f"****** Now Showing Group {x} ******\n\n")
@@ -245,7 +170,6 @@ def begin(run):
         std_dev = 0
         sec_gps = []
         temp_credit = []
-        
         empty_list(temp_sec)
         
         for y in temp[1:]:
@@ -254,21 +178,11 @@ def begin(run):
             sec_gps.append(sectempgpa)
             temp_credit.append(temp_cred)
             std_dev = np.std(temp_sec)
-        
-        
-        
         temp_GROUP = calc_Group_GPA(sec_gps, temp_credit)
         group_GPAs.append(temp_GROUP)
-        
-        
-        
         file.write(f"\nThe GPA of group {x} is: {round(temp_GROUP,3)}\n\n")
         newtemp = create_SEC(x)
         newcount = 0
-        
-        '''
-        FAST FUNCTION BABY
-        '''
         
         for g in newtemp[1:]:
             empty_list(temp_sec)
@@ -281,18 +195,9 @@ def begin(run):
             else:
                 file.write(".")
         file.write("\n\n")
-    
-    
-    
     temp_av = sum(group_GPAs) / len(group_GPAs)
-    
-    
     temp_grp_std = 0
     temp_grp_std = np.std(group_GPAs)
-    
-    '''
-    FAST FUNCTION BABY
-    '''
     
     for x in group_GPAs:
         temp_gpa = x
@@ -300,9 +205,7 @@ def begin(run):
         if temp_Z_score > 2.0 or temp_Z_score < -2:
             file.write(f"\n\n Group {x} standard deviation is significant to the group, Z_Score = {temp_Z_score}")
     
-    
     update_text("Getting Relevant Students...")
-    
     
     #creates a new array that groups the array of students that got very good grades and resets the index
     df_grouped_good = df.groupby('Student')['Courses'].agg(', '.join).reset_index()
@@ -327,27 +230,31 @@ def begin(run):
     df_filtered_help = df_filtered_help.drop(columns=['Num_Courses'])
     
     update_text("Printing...")
-    
     file.write(f"\nHere are the students with more than one A-, A\n\n")
+    
     for index, row in df_filtered_good.iterrows():
         file.write(row['Student'] + ' || ' + row['Courses'] + '\n')
         file.write(' ' * 80 + '\n')
-    
     file.write(f"\nHere are the students with more than one D+, D, D-, F\n\n")
+    
     for index, row in df_filtered_help.iterrows():
         file.write(row['Student'] + ' || ' + row['Courses'] + '\n')
         file.write(' ' * 80 + '\n')
-    
     update_text("Removing existing data...")
-    
     update_text("DONE! Please go to the file location of the .RUN file for the .txt file!")
 
+# this section sets up the User interface
+# this starts the user interface with a var named window
 window = tk.Tk()
+# title
 window.title("GPA Project Calculator")
+# size of window
 window.geometry("700x350")
-
 run_file = ""
 
+# This function activates when the user presses the upload file button
+# Inputs are: None
+# Outputs are: None
 def upload_file():
     file_path = filedialog.askopenfilename(filetypes=[("Runnable Files", "*.run")])
    
@@ -365,9 +272,9 @@ def upload_file():
     df = pd.DataFrame()
     df_help = pd.DataFrame()
     
-    
-    
-
+# This function opens up the created text file for the project
+# Inputs are: None
+# Outputs are: None
 def go_to_text():
     file_name = "GPA_Results.txt"
     try:
@@ -376,31 +283,25 @@ def go_to_text():
     except FileNotFoundError:
         update_text("Error: Could not open the .txt file. Go directly to directory.")
 
+# Button for uploading the .RUN file
 upload_button = tk.Button(window, text="Upload .run File", command=upload_file)
 upload_button.pack(pady=20)
 
+# Button for going to the .txt file
 txt_button = tk.Button(window,text="Go to text File!",command=go_to_text)
 txt_button.pack(pady = 30)
 
+# This function updates the text in the text box on the bottom
+# Inputs are: text to update
+# Outputs are: Shows text on screen
 def update_text(text):
     text_box.insert(tk.END, text + "\n")
     text_box.see(tk.END)
 
+# This is the text box that gets updated
 text_box = tk.Text(window, width=50, height=70, font=("Arial", 12), wrap="word", borderwidth=2)
 text_box.pack(padx=15, pady=20)
-
 update_text("Please select the .RUN file you want to use!")
 
+# This starts the main loop for everything in the GUI
 window.mainloop()
-
-#Use any .run file you want
-
-'''
-3 SIGNIFICANT DIGITS
-
-Students should include the Sections where they got the good grades in.
-
-STUDENTS ORDER
-- ordered by most A's, alphabetically (so 3 A's alphabetically, 2 A's alphabetically, same with the D's)
-
-'''

@@ -24,7 +24,7 @@ def create_GRP(run):
     data = []  
     with open(run) as file:
         line = file.readlines()
-        for x in line:
+        for x in line: 
             x = x.strip()
             data.append(x)
     return data
@@ -178,7 +178,8 @@ def begin(run):
             std_dev = np.std(temp_sec)
         temp_GROUP = calc_Group_GPA(sec_gps, temp_credit)
         group_GPAs.append(temp_GROUP)
-        file.write(f"\nThe GPA of group {x} is: {round(temp_GROUP,3)}\n\n")
+        temp_temp_GROUP = "{:.3f}".format(temp_GROUP)
+        file.write(f"\nThe GPA of group {x} is: {temp_temp_GROUP}\n\n")
         newtemp = create_SEC(x)
         newcount = 0
         
@@ -187,9 +188,14 @@ def begin(run):
             newsectemp = sec_gps[newcount]
             newcount = newcount + 1
             z_score = (newsectemp - temp_GROUP) / std_dev
-            file.write(f"\nSection {g}'s GPA is {round(newsectemp,3)}") 
+            temp_newsectemp = "{:.3f}".format(newsectemp)
+            file.write(f"\nSection {g}'s GPA is {temp_newsectemp}") 
             if z_score >= 2 or z_score <= -2:
-                file.write(f" which is different from the Group GPA by a Z-Score of {round(z_score,2)}")
+                new_z_score = "{:.3f}".format(z_score)
+                file.write(f" which is different from the Group GPA by a Z-Score of {new_z_score}")
+                
+                # {round(z_score,2)}           
+                
             else:
                 file.write(".")
         file.write("\n\n")
@@ -259,6 +265,7 @@ def begin(run):
     update_text("Removing existing data...")
     update_text("DONE! Please go to the file location of the .RUN file for the .txt file!")
 
+
 # this section sets up the User interface
 # this starts the user interface with a var named window
 window = tk.Tk()
@@ -287,11 +294,17 @@ def upload_file():
 # Inputs are: None
 # Outputs are: None
 def go_to_text():
+    global df, df_help
     file_name = "GPA_Results.txt"
     try:
         os.system(f"notepad {file_name}")
     except FileNotFoundError:
         update_text("Error: Could not open the .txt file. Go directly to directory.")
+        
+    df = pd.DataFrame()
+    df_help = pd.DataFrame()
+        
+    
 
 # Button for uploading the .RUN file
 upload_button = tk.Button(window, text="Upload .run File", command=upload_file)

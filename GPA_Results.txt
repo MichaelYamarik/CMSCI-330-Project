@@ -7,59 +7,13 @@ The GPA of group COMSC100.grp is: 3.303
 Section COMSC123001.sec's GPA is 2.642.
 Section COMSC123002.sec's GPA is 3.833.
 Section COMSC123003.sec's GPA is 3.968.
-Section COMSC125001.sec's GPA is 3.66.
+Section COMSC125001.sec's GPA is 3.660.
 Section COMSC125002.sec's GPA is 2.867.
 Section COMSC130001.sec's GPA is 3.036.
-
-****** Now Showing Group Combined123.grp ******
-
-
-The GPA of group Combined123.grp is: 3.524
-
-
-Section COMSC123001.sec's GPA is 2.642 which is different from the Group GPA by a Z-Score of -2.03
-Section COMSC123002.sec's GPA is 3.833.
-Section COMSC123003.sec's GPA is 3.968.
-Section CNST123001.sec's GPA is 3.812.
-Section CNST123002.sec's GPA is 3.2.
-Section ENGR123001.sec's GPA is 3.77.
-Section ENGR123002.sec's GPA is 3.622.
 
 
 Here are the students with more than one A-, A
 
-Csuyazp, Dzppzx || COMSC125001.sec, ENGR123002.sec
-                                                                                
-Cyjpka, Itcyp || COMSC123002.sec, CNST123001.sec
-                                                                                
-Cyxt, Eewczhya || COMSC123003.sec, CNST123002.sec
-                                                                                
-Czhmkp, Tewcyxm || COMSC125001.sec, ENGR123002.sec
-                                                                                
-Dckaypko, Jkffxkj || COMSC123003.sec, CNST123002.sec
-                                                                                
-Dyxzp, Uhfxkm || COMSC123002.sec, CNST123001.sec
-                                                                                
-Fuyhh, Ugeryeh || COMSC125001.sec, ENGR123002.sec
-                                                                                
-Gexzsb, Jyazp || COMSC125001.sec, ENGR123002.sec
-                                                                                
-Lytkh, Rcydyh || COMSC125001.sec, ENGR123002.sec
-                                                                                
-Nyhkpte, Ryxxkhh || COMSC125001.sec, ENGR123002.sec
-                                                                                
-Qkxxkexy, Eewczhya || COMSC123003.sec, CNST123002.sec
-                                                                                
-Rkawckpka, Jzcp || COMSC125001.sec, ENGR123002.sec
-                                                                                
-Rsgsw, Oeacy || COMSC123003.sec, CNST123002.sec
-                                                                                
-Tyuexkl, Kysxkp || COMSC125001.sec, ENGR123002.sec
-                                                                                
-Uhukemy, Eytcyp || COMSC123002.sec, CNST123001.sec
-                                                                                
-Wyuygyjyace, Tkpy || COMSC123002.sec, CNST123001.sec
-                                                                                
 
 Here are the students with more than one D+, D, D-, F
 
